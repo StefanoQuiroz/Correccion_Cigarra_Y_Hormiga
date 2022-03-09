@@ -1,0 +1,112 @@
+.creditos .imagen_portada,
+#final_cuento .creditos .imagen_portada{
+    background-image: url(../img/cigarra_hormiga/ch_portada.jpg);
+    background-size: cover;
+    background-position: 13.5%;
+    background-color: #fbc19f;
+}
+
+.sprite{ 
+    background-image: url("../img/cigarra_hormiga/ch_sprite.png");
+/*    background-color: rgba(255,255,0,0.5);*/
+}
+.fondo{
+    background-size: cover;
+    background-position: 50%;
+    zoom: 0.5;
+}
+
+#escena_00 .fondo{ 
+    background-image: url("../img/cigarra_hormiga/ch_esc_0_fondo.jpg");
+/*    background-image: url("../img/cigarra_hormiga/testpos0.jpg");*/
+}
+#escena_00 .brillos .brillo{ 
+    width: 40px;
+    height: 40px;
+    background-position: -1617px -1465px;
+}
+#escena_00 .particulas{
+    top: 300px;
+}
+#escena_00 .particulas .particula{ 
+    width: 58px;
+    height: 59px;
+    background-position: -1663px -1470px;
+}
+#escena_00 .pasto{ 
+    width: 1260px;
+    height: 540px;
+    left: -300px;
+    background-position: 0px -286px;
+/*    opacity: 0;*/
+}
+#escena_00 .hojas{ 
+    width: 483px;
+    height: 540px;
+    left: -300px;
+    background-position: -1270px -287px;
+/*    opacity: 0;*/
+}
+#escena_00 .hormigas{
+    top: 150px;
+}
+#escena_00 .hormigaA{
+    background-image: url(../img/cigarra_hormiga/00_hormiga_camina_A_0.png);
+    width: 159px;
+    height: 235px;
+    top:150px;
+}
+#escena_00 .hormigaB{
+    background-image: url(../img/cigarra_hormiga/00_hormiga_camina_B_0.png);
+    width: 279px;
+    height: 306px;
+}
+
+#escena_00 .hormigaA.hormiga0{  left: 0;}
+#escena_00 .hormigaB.hormiga0{  left: 320px;}
+#escena_00 .hormigaA.hormiga1{  left: 700px;}
+#escena_00 .hormigaB.hormiga1{  left: 1020px;}
+#escena_00 .hormigaA.hormiga2{  left: 1400px;}
+#escena_00 .hormigaB.hormiga2{  left: 1720px;}
+#escena_00 .hormigaA.hormiga3{  left: 2100px;}
+#escena_00 .hormigaB.hormiga3{  left: 2420px;}
+#escena_00 .hormigaB.hormiga4{  left: -380px;}
+
+
+#escena_01 .fondo{ 
+    background-image: url("../img/cigarra_hormiga/ch_esc_1_fondo.jpg");
+/*    background-image: url("../img/cigarra_hormiga/testpos1.jpg");*/
+}
+
+#escena_01 .cigarra{
+    background-image: url("../img/cigarra_hormiga/01_cigarra_toca.png");
+    width: 385px;
+    height: 335px;
+    top: 0;
+    left: 580px;
+}
+
+#escena_01 .hormiga{
+    background-image: url("../img/cigarra_hormiga/01_hormiga.png");
+    width: 195px;
+    height: 269px;
+    top: 200px;
+    left: 280px;
+}
+
+#escena_01 .flor{
+    width: 248px;
+    height: 360px;
+    background-position: -1763px -287px;
+    top: 116px;
+    left: 180px;
+}
+
+
+
+
+
+
+
+
+

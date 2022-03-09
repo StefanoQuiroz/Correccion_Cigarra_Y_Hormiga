@@ -1,0 +1,264 @@
+#escena_02 .fondo{ 
+    background-image: url("../img/cigarra_hormiga/ch_esc_2_fondo.jpg");
+}
+#escena_02 .fondoB{ 
+    background-image: url("../img/cigarra_hormiga/ch_esc_2_fondo_fin.jpg");
+}
+
+#escena_02 .hojas{
+    left: 150px;
+    top: -150px;
+}
+.hojaA{
+    width: 188px;
+    height: 99px;
+    background-position: -1270px -1368px;
+}
+.hojaB{
+    width: 152px;
+    height: 83px;
+    background-position: -1275px -1477px;
+}
+.hojaC{
+    width: 144px;
+    height: 63px;
+    background-position: -1745px -1407px;
+}
+
+#escena_02 .pajaros{
+    background-image: url("../img/cigarra_hormiga/02_pajaros.png");
+    width: 339px;
+    height: 294px;
+    top: 900px;
+    left: 1400px;
+}
+
+
+#escena_03 .fondo{ 
+    background-image: url("../img/cigarra_hormiga/ch_esc_3_fondo.jpg");
+}
+
+#escena_03 .hormiga{
+    background-image: url("../img/cigarra_hormiga/03_hormiga.png");
+    width: 258px;
+    height: 355px;
+    top: 230px;
+    left: 620px;
+}
+
+#escena_03 .cigarra{
+    top: 160px;
+    left: 1550px;
+}
+#escena_03 .cigarra .cuerpo{
+    width: 218px;
+    height: 190px;
+    background-position: -1763px -657px;
+}
+#escena_03 .cigarra .pata{
+    width: 69px;
+    height: 42px;
+    
+    top: 82px;
+    left: -8px;
+}
+#escena_03 .cigarra .pata .patain{
+    width: 69px;
+    height: 42px;
+    background-position: -1745px -1480px;
+
+}
+#escena_03 .cigarra .pata .pie{
+    width: 32px;
+    height: 19px;
+    background-position: -1824px -1477px;
+    top: 22px;
+    left: -21px;
+/*    z-index: -1;*/
+}
+
+#escena_03 .cigarra .ojos{
+    width: 62px;
+    height: 31px;
+    background-position: -1899px -1407px;
+    top: 69px;
+    left: 119px;
+}
+
+
+#escena_03 .hojas{
+    top: -150px;
+    left: 100px;
+}
+
+
+/* #escena_04 .fondo{ 
+    background-image: url("../img/cigarra_hormiga/ch_esc_5_fondo.jpg");
+}
+
+#escena_04 .cigarra1{
+    width:620px;
+    height: 391px;
+    background-position: 0px -837px;
+    top: 298px;
+    left: 330px;
+}
+#escena_04 .cigarra2{
+    width:626px;
+    height: 375px;
+    background-position: -630px -835px;
+    top: 380px;
+    left: 240px;
+}
+.gotaA{
+    width:42px;
+    height: 92px;
+    background-position: -1565px -1368px;
+}
+.gotaB{
+    width:54px;
+    height: 48px;
+    background-position: -1617px -1407px;
+}
+#escena_04 .gotea_en_mano{
+    left: 440px;
+}
+#escena_04 .gotea_en_mano .gota_grande{top:-92px; left: 230px; }
+#escena_04 .gotea_en_mano .gota_chica{ top:690px; }
+#escena_04 .lluvia{ left:100px; } */
+
+
+#escena_04 .fondo{ 
+    background-image: url("../img/cigarra_hormiga/ch_esc_5_fondo.jpg");
+}
+#escena_04 .nieve{
+    left: 200px;
+}
+#escena_04 .nieve2{
+    left: 200px;
+}
+.copoC{
+    width: 54px;
+    height: 48px;
+    background-position: -1681px -1407px;
+}
+.copoD{
+    width: 90px;
+    height: 90px;
+    background-position: -1458px -1469px;
+}
+#escena_04 .viento{
+    background-image: url("../img/cigarra_hormiga/05_viento.png");
+    width: 850px;
+    height: 395px;
+}
+#escena_04 .ventisca{
+    width: 2340px;
+    height: 277px;
+    background-position: 0 0;
+}
+
+#escena_04 .cigarra{
+    background-image: url("../img/cigarra_hormiga/05_cigarra.png");
+    width:312px;
+    height: 160px;
+    top: 600px;
+    left: 400px;
+}
+
+#escena_05 .fondo{           
+    background-image: url("../img/cigarra_hormiga/ch_esc_6_fondo.jpg");
+/*    background-image: url("../img/cigarra_hormiga/testpos6.jpg");*/
+}
+#escena_05 .cigarra{
+    width:353px;
+    height: 521px;
+    background-position: -1266px -837px;
+    top: 40px;
+    left: 600px;
+}
+#escena_05 .cigarra .parpados{
+    top: 198px;
+    left: 69px;
+}
+#escena_05 .cigarra .parpados div{
+    width: 87px;
+    height: 91px;
+    background-position: -1468px -1368px;
+}
+#escena_05 .cigarra .parpados .der{
+    left: 137px;
+}
+
+#escena_05 .puerta{
+    background-image: url("../img/cigarra_hormiga/06_puerta.jpg");
+    width: 1920px;
+    height: 1080px;
+/*    opacity: 0*/
+}
+
+#escena_05 .cubre_puerta .izq{
+    width: 333px;
+    height: 540px;
+    background-position: -1629px -857px;
+    left: -90px;
+}
+#escena_05 .cubre_puerta .der{
+    width: 302px;
+    height: 540px;
+    background-position: -1972px -857px;
+    left: 1340px; 
+}
+#escena_05 .nieve{
+    left: 300px;
+}
+
+#escena_06 .fondo{ 
+    background-image: url("../img/cigarra_hormiga/ch_esc_7_fondo.jpg");
+/*    background-image: url("../img/cigarra_hormiga/testpos7.jpg");*/
+}
+
+
+#escena_06 .fuego{
+    background-image: url("../img/cigarra_hormiga/07_fuego.png");
+    width: 79px;
+    height: 166px;
+    left: -40px;
+    top: 420px;
+/*    opacity: 0*/
+}
+#escena_06 .cigarra{
+    background-image: url("../img/cigarra_hormiga/07_cigarra.png");
+    width: 341px;
+    height: 502px;
+    left: 260px;
+    top: -30px;
+/*    opacity: 0*/
+}
+#escena_06 .blur{
+    width: 1260px;
+    height: 324px;
+    background-position: 0 -1238px;
+    left: -250px;
+    top: 438px;
+/*    opacity: 0*/
+}
+
+#escena_00 .btn_interact{ top: 230px; left: 1350px; }
+
+#escena_01 .btn_interact{ top: 470px; left: 850px; }
+
+#escena_02 .btn_interact{ top: 360px; left: 870px; }
+
+#escena_03 .btn_interact{ top: 205px; left: 1630px;}
+
+/* #escena_04 .btn_interact{ top: 562px; left: 700px; } */
+
+#escena_04 .btn_interact{ top: 515px; left: 529px; }
+
+#escena_05 .btn_interact{ top: 540px; left: 1225px; }
+
+#escena_06 .btn_interact{ top: 370px; left: 760px;}
+
+
+
