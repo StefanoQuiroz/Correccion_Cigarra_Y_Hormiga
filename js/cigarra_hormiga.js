@@ -63,14 +63,14 @@ let JSON_CUENTO = {
             [
                 {
                     texto: '"¿Te has fijado en lo trabajadoras que son las hormigas?',
-                    tiempo:[0,4,12]
+                    tiempo:[0,4,6]
                 },
                 {
                     texto: 'En el bosque de este cuento vivía una hormiga que pasaba el verano trabajando y trabajando',
                     tiempo:[4.5,12.95,1]
                 },
                 {
-                    texto: 'para juntar alimento que le permitieran sobrevivir durante los fríos meses de invierno."',
+                    texto: 'para juntar alimento que le permitiera sobrevivir durante los fríos meses de invierno."',
                     tiempo:[13.45,20.2,0.5]
                 },
                 
@@ -110,11 +110,11 @@ let JSON_CUENTO = {
                 {
                     texto: 'y los pájaros comenzaron a volar en busca de un lugar más cálido para anidar.',
                     tiempo:[2.8,8.9,1.0]
-                },
+                }/* ,
                 {
                     texto: '',
                     tiempo:[9.4,10.4,8.0]
-                } 
+                }  */
             ]
         },
         {
@@ -124,11 +124,11 @@ let JSON_CUENTO = {
             parrafos:
             [
                 {
-                    texto: 'Las primeras hojas del otoño anunciaron que el frío.',
-                    tiempo:[0,4.4,2]
+                    texto: 'Las primeras hojas del otoño anunciaron que el frío',
+                    tiempo:[0,4.4,4]
                 },
                 {
-                    texto: 'No tardaría en llegar.',
+                    texto: 'no tardaría en llegar.',
                     tiempo:[4.9,6.8,1]
                 },
                 {
@@ -201,7 +201,7 @@ let JSON_CUENTO = {
             [
                 {
                     texto: '“¡Hormiga, por favor, ayúdame! Me estoy congelando y no encuentro nada para comer.”',
-                    tiempo:[0,8.5,3]
+                    tiempo:[0,8.5,5]
                 },
                 {
                     texto: 'La hormiga acogió a la cigarra y le dio de comer.',
@@ -518,7 +518,7 @@ SteppedEase.config(frames-1),repeat:repeatOn,yoyo:yoyo})
     },
     playBanjo:() => {
 //        Player.playSoundFX('musica_banjo_loop',true);
-        ANIM.waitForSound('musica_banjo_loop',0,29.7,0,0,1,false);
+        ANIM.waitForSound('musica_banjo_loop',0,29.7,0,0,0.4,false);
 //        ANIM.fadeVolume('musica_banjo_loop',0,1,4);
     },
     playRuidoDeViento:() => {
@@ -639,13 +639,13 @@ SteppedEase.config(frames-1),repeat:repeatOn,yoyo:yoyo})
         Player.creaMainTL();
     
 
-        let preAnimacionEscena3 = new TimelineMax();
+        /* let preAnimacionEscena3 = new TimelineMax();
         preAnimacionEscena3
             .addCallback(function(){
                 ANIM.getTlAnimacionesSprite('02', 'pajaros',2,1,0,1, false, 10);
             })
             .fromTo('#escena_02 .pajaros', 10,{rotation:45, x:0, y:0},{rotation:45, x:-1700, y:-1500, ease:Power0.easeNone})
-        ANIM.main_tl.add(preAnimacionEscena3, '2_1+=6.1');
+        ANIM.main_tl.add(preAnimacionEscena3, '2_1+=6.1'); */
 
         ANIM.main_tl.addCallback( function(){
             ANIM.animParticulas('00','brillo');
@@ -658,9 +658,10 @@ SteppedEase.config(frames-1),repeat:repeatOn,yoyo:yoyo})
         ANIM.main_tl.addLabel('1_0_audio_fade', '1_0-=2');
         ANIM.main_tl.addCallback(function () {
             Player.playSoundFX('musica_banjo_loop');
+            Player.cambiaVolume('musica_banjo_loop',0.4);            
         }, '1_0_audio');
         ANIM.main_tl.addCallback(function () {
-            ANIM.fadeVolume('musica_banjo_loop',1,0,2);
+            ANIM.fadeVolume('musica_banjo_loop',0.4,0,7.5);
         }, "1_0_audio_fade");
         
         ANIM.main_tl.addCallback( function(){ANIM.fadeVolume('marcha_hormigas',1,0,2);},'0_0-=2');
@@ -679,7 +680,7 @@ SteppedEase.config(frames-1),repeat:repeatOn,yoyo:yoyo})
             ANIM.hojasCaen('03', 1700,900,2.5);
             Player.playSoundFX('hojas_caen',true);
         },'escena_3+=0.01');
-        ANIM.main_tl.addCallback( function(){ANIM.fadeVolume('hojas_caen',1,0,2);},'3_0-=2');
+        ANIM.main_tl.addCallback( function(){},'3_0-=2');
         
         
         ANIM.main_tl.addCallback( function(){
@@ -711,9 +712,9 @@ SteppedEase.config(frames-1),repeat:repeatOn,yoyo:yoyo})
             try{   ANIM.tl_parpadeo_05_cigarra.pause(0.1); } catch(err){}
         },'escena_5+=0.01');
         ANIM.main_tl.addCallback( function(){ANIM.animaEscena4();},'5_0+=0.01');
-        ANIM.main_tl.addCallback( function(){Player.playSoundFX('knock',false,1.2); Player.resetSubtitulos();},'5_0-=2.9');
-        ANIM.main_tl.add(TweenMax.to('#escena_05 .puerta',2,{scaleX:0, transformOrigin:'center right', ease:Power1.easeIn}),'5_0-=2');
-        ANIM.main_tl.addCallback( function(){Player.playSoundFX('chirrido_puerta')},'5_0-=1');
+        ANIM.main_tl.addCallback( function(){Player.playSoundFX('knock',false,1.2); Player.resetSubtitulos();},'5_0-=4.9');
+        ANIM.main_tl.add(TweenMax.to('#escena_05 .puerta',2,{scaleX:0, transformOrigin:'center right', ease:Power1.easeIn}),'5_0-=4');
+        ANIM.main_tl.addCallback( function(){Player.playSoundFX('chirrido_puerta')},'5_0-=3');
         
         
         
@@ -734,8 +735,9 @@ SteppedEase.config(frames-1),repeat:repeatOn,yoyo:yoyo})
             ANIM.main_tl.pause(); 
 //            ANIM.interactividad(0); 
             ANIM.animaEscena0();
-            Player.playSoundFX('marcha_hormigas_escena_00',true);
-            ANIM.fadeVolume('marcha_hormigas_escena_00',1,0,18);
+            Player.playSoundFX('marcha_hormigas',true);
+            Player.playSoundFX('musica_banjo_loop',true);
+            Player.cambiaVolume('musica_banjo_loop',0.4);
             Player.tooglePlayPauseIco(); 
             Player.resetSubtitulos(); 
         },"fin_escena_0");
@@ -765,6 +767,14 @@ SteppedEase.config(frames-1),repeat:repeatOn,yoyo:yoyo})
         ANIM.main_tl.addCallback(function(){
             ANIM.main_tl.pause();
             ANIM.interactividad(2);
+            if(!ANIM.tl_pajaro_03){
+                ANIM.tl_pajaro_03 = new TimelineMax();
+                ANIM.tl_pajaro_03
+                    .addCallback(function(){
+                        ANIM.getTlAnimacionesSprite('02', 'pajaros',2,1,0,1, false, 10);
+                    })
+                    .fromTo('#escena_02 .pajaros', 10,{rotation:45, x:0, y:0},{rotation:45, x:-1700, y:-1500, ease:Power0.easeNone})
+            }
             ANIM.playRuidoDeViento();
             Player.activaBtnSiguiente();
             Player.tooglePlayPauseIco();
