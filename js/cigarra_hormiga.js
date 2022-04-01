@@ -84,7 +84,7 @@ let JSON_CUENTO = {
             [
                 {
                     texto: 'En el mismo bosque, la cigarra cantaba al sol acompañada de su guitarra.',
-                    tiempo:[0,6.5,7.5]
+                    tiempo:[0,6.5,5]
                 },
                 {
                     texto: '“Amiga, no te canses. Ven y canta conmigo.”',
@@ -169,7 +169,7 @@ let JSON_CUENTO = {
             [
                 {
                     texto: 'Vino la lluvia,',
-                    tiempo:[0,1.7,4]
+                    tiempo:[0,1.7,7]
                 },
                 {
                     texto: 'el granizo,',
@@ -654,7 +654,13 @@ SteppedEase.config(frames-1),repeat:repeatOn,yoyo:yoyo})
             Player.cambiaVolume('marcha_hormigas',0.4);
         },'escena_0+=0.01'); 
 
-        ANIM.main_tl.addLabel('1_0_audio', 'escena_1+=0.1');
+        ANIM.main_tl.addCallback( function(){
+            Player.playSoundFX('musica_banjo_loop');
+            //Player.cambiaVolume('musica_inicio', 0.2);
+            ANIM.fadeVolume('musica_banjo_loop',1,0,5); //0.3
+        } ,'escena_1+=0.01');
+
+        /* ANIM.main_tl.addLabel('1_0_audio', 'escena_1+=0.1');
         ANIM.main_tl.addLabel('1_0_audio_fade', '1_0-=2');
         ANIM.main_tl.addCallback(function () {
             Player.playSoundFX('musica_banjo_loop');
@@ -662,7 +668,7 @@ SteppedEase.config(frames-1),repeat:repeatOn,yoyo:yoyo})
         }, '1_0_audio');
         ANIM.main_tl.addCallback(function () {
             ANIM.fadeVolume('musica_banjo_loop',0.4,0,7.5);
-        }, "1_0_audio_fade");
+        }, "1_0_audio_fade"); */
         
         ANIM.main_tl.addCallback( function(){ANIM.fadeVolume('marcha_hormigas',1,0,2);},'0_0-=2');
         ANIM.main_tl.addCallback( function(){ANIM.animaEscena0();},'0_0+=0.01');
@@ -683,13 +689,18 @@ SteppedEase.config(frames-1),repeat:repeatOn,yoyo:yoyo})
         ANIM.main_tl.addCallback( function(){},'3_0-=2');
         
         
+
         ANIM.main_tl.addCallback( function(){
             Player.playSoundFX('init_lluvia');
+            ANIM.fadeVolume('init_lluvia',1,0,7); //0.3
+            Player.playSoundFX('viento');
+            ANIM.fadeVolume('viento',1,0,7); //0.3
             //ANIM.gotasCaen();
             //ANIM.animaEscena4();
         },'escena_4+=0.01');
         
-        ANIM.main_tl.addCallback( function(){ANIM.fadeVolume('init_lluvia',1,0,4);},'4_0-=2');
+        //ANIM.main_tl.addCallback( function(){ANIM.fadeVolume('init_lluvia',1,0,4);},'4_0-=2');
+        
         /* ANIM.main_tl.addCallback( function(){ANIM.animaEscena4();},'4_0+=0.01');
         ANIM.main_tl.addCallback( function(){ANIM.animaEscena4();},'4_1+=0.01');
         ANIM.main_tl.addCallback( function(){ANIM.animaEscena4();},'4_2+=0.01');
