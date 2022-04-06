@@ -637,15 +637,6 @@ SteppedEase.config(frames-1),repeat:repeatOn,yoyo:yoyo})
     init:() => {
         ANIM.creapartes();
         Player.creaMainTL();
-    
-
-        /* let preAnimacionEscena3 = new TimelineMax();
-        preAnimacionEscena3
-            .addCallback(function(){
-                ANIM.getTlAnimacionesSprite('02', 'pajaros',2,1,0,1, false, 10);
-            })
-            .fromTo('#escena_02 .pajaros', 10,{rotation:45, x:0, y:0},{rotation:45, x:-1700, y:-1500, ease:Power0.easeNone})
-        ANIM.main_tl.add(preAnimacionEscena3, '2_1+=6.1'); */
 
         ANIM.main_tl.addCallback( function(){
             ANIM.animParticulas('00','brillo');
@@ -778,14 +769,17 @@ SteppedEase.config(frames-1),repeat:repeatOn,yoyo:yoyo})
         ANIM.main_tl.addCallback(function(){
             ANIM.main_tl.pause();
             ANIM.interactividad(2);
-            if(!ANIM.tl_pajaro_03){
-                ANIM.tl_pajaro_03 = new TimelineMax();
-                ANIM.tl_pajaro_03
-                    .addCallback(function(){
-                        ANIM.getTlAnimacionesSprite('02', 'pajaros',2,1,0,1, false, 10);
-                    })
-                    .fromTo('#escena_02 .pajaros', 10,{rotation:45, x:0, y:0},{rotation:45, x:-1700, y:-1500, ease:Power0.easeNone})
-            }
+            //if(ANIM.tl_pajaro_03){
+            ANIM.tl_pajaro_03 = new TimelineMax();
+            ANIM.tl_pajaro_03
+                .addCallback(function(){
+                    ANIM.getTlAnimacionesSprite('02', 'pajaros',2,1,0,1, false,-1);
+                })
+                
+                .fromTo('#escena_02 .pajaros', 10,{rotation:45, x:0, y:0},{rotation:45, x:-1700, y:-1500, ease:Power0.easeNone})
+                //.fromTo('#escena_02 .pajaros', 10,{rotation:45, x:0, y:0},{rotation:45, x:-1700, y:-1400, ease:Power0.easeNone})
+            //}
+            ANIM.tl_pajaro_03.resume();
             ANIM.playRuidoDeViento();
             Player.activaBtnSiguiente();
             Player.tooglePlayPauseIco();
